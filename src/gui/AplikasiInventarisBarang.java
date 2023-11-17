@@ -509,7 +509,7 @@ int respon =JOptionPane.showConfirmDialog(null, "hapus Isi tabel yang di pilih ?
 
     private void btnexportActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnexportActionPerformed
      String filePath = "C:\\Users\\Administrator\\Documents\\NetBeansProjects\\TitisSukmono-2110010021-UTS\\export\\data_tabel.txt"; 
-        File file = new File(filePath);
+        File file = new File(filePath); //mengesport data isi tabel ke file dokumen txt
         
         try {
             FileWriter fw = new FileWriter(file);
@@ -522,7 +522,7 @@ int respon =JOptionPane.showConfirmDialog(null, "hapus Isi tabel yang di pilih ?
                 bw.newLine();
                
             }
-             JOptionPane.showMessageDialog(null, "Berhasil DI eksport");
+             JOptionPane.showMessageDialog(null, "Berhasil DI eksport"); //jika berhasi maka tampil message
             
             
             bw.close();
