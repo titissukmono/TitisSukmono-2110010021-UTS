@@ -123,11 +123,6 @@ public class AplikasiInventarisBarang extends javax.swing.JFrame {
         jLabel4.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel4.setText("STOCK");
 
-        tfstok.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                tfstokActionPerformed(evt);
-            }
-        });
         tfstok.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
                 tfstokKeyTyped(evt);
@@ -401,10 +396,6 @@ public class AplikasiInventarisBarang extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_tfkdbarangActionPerformed
 
-    private void tfstokActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfstokActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_tfstokActionPerformed
-
     private void tfsatuanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfsatuanActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_tfsatuanActionPerformed
@@ -419,7 +410,7 @@ public class AplikasiInventarisBarang extends javax.swing.JFrame {
             tfsatuan.setText(tbl.getValueAt(line, 3).toString());
             
             btnTambah.setEnabled(false);
-            btnedit.setEnabled(false); // mengemabilan button edit ke edaan mati
+            btnedit.setEnabled(false); // mengemabilan button edit keadaan mati
             btnSimpan.setEnabled(true); // button simpan akan hidup
     }//GEN-LAST:event_btneditActionPerformed
 
@@ -441,7 +432,7 @@ int respon =JOptionPane.showConfirmDialog(null, "hapus Isi tabel yang di pilih ?
 
     private void btnTambahActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnTambahActionPerformed
         try {
-             DefaultTableModel model=(DefaultTableModel) tbl.getModel();  //default tabelmode ke model
+             DefaultTableModel model=(DefaultTableModel) tbl.getModel();  //default tabel model ke model
         
                     
             //jika button tambah di klik maka
@@ -471,7 +462,7 @@ int respon =JOptionPane.showConfirmDialog(null, "hapus Isi tabel yang di pilih ?
     private void tfstokKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_tfstokKeyTyped
   
         char c= evt.getKeyChar();
-        if(! ((Character.isDigit(c)) || // jika textsatuan di ketik dengan huruf ABC SELAIN HURUF ANGKA 1-9  maka akan muncul peringan 
+        if(! ((Character.isDigit(c)) || // jika textStock di ketik  SELAIN HURUF ANGKA 1-9  maka akan muncul peringan 
             ( c== KeyEvent.VK_BACK_SPACE)
             || (c== KeyEvent.VK_DELETE)
         ))
@@ -508,7 +499,7 @@ int respon =JOptionPane.showConfirmDialog(null, "hapus Isi tabel yang di pilih ?
                 }
         clear(); // membersihan txt field 
 
-            btnedit.setEnabled(true); // mengembalikan button edit ke keadaan mati
+            btnedit.setEnabled(true); // mengembalikan button edit,simpan,dan tambah  ke keadaan mati
             btnSimpan.setEnabled(false);
             btnTambah.setEnabled(true);
             
